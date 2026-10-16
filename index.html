@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lamper Home · Termostato inteligente y control del consumo de luz en Terrassa</title>
+<meta name="description" content="Lamper Home: app y dispositivos que instalamos en tu casa de Terrassa para ver tu consumo eléctrico por horas (punta, llano y valle), controlar calefacción y aire acondicionado desde el móvil y pagar menos.">
+<link rel="canonical" href="https://lamper-home.github.io/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#052143">
+<meta name="author" content="Lamper Instalaciones y Mantenimiento S.L.">
+<meta name="geo.region" content="ES-B">
+<meta name="geo.placename" content="Terrassa">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Lamper Home">
+<meta property="og:title" content="Lamper Home · Tu casa, más cómoda">
+<meta property="og:description" content="Mira tu consumo de luz hora a hora, controla la calefacción y el aire desde el móvil y paga menos. Instalado por Lamper en Terrassa.">
+<meta property="og:url" content="https://lamper-home.github.io/">
+<meta property="og:image" content="https://lamper-home.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Lamper Home: consumo eléctrico y termostato en el móvil">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["HVACBusiness", "Electrician"],
+      "@id": "https://lamper-home.github.io/#lamper",
+      "name": "Lamper Instalaciones y Mantenimiento S.L.",
+      "alternateName": "Lamper",
+      "url": "https://www.lamper.es",
+      "logo": "https://lamper-home.github.io/icon-512.png",
+      "image": "https://lamper-home.github.io/og.png",
+      "telephone": "+34680427261",
+      "email": "info@lamper.es",
+      "vatID": "B75522136",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ronda de Ponent 166, Local 1",
+        "postalCode": "08225",
+        "addressLocality": "Terrassa",
+        "addressRegion": "Barcelona",
+        "addressCountry": "ES"
+      },
+      "areaServed": {"@type": "City", "name": "Terrassa"},
+      "knowsAbout": ["Electricidad", "Climatización", "Aerotermia", "Fontanería", "Fotovoltaica", "Domótica", "Gas", "Ventilación", "Mantenimiento técnico"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lamper-home.github.io/#web",
+      "url": "https://lamper-home.github.io/",
+      "name": "Lamper Home",
+      "inLanguage": "es-ES",
+      "publisher": {"@id": "https://lamper-home.github.io/#lamper"}
+    },
+    {
+      "@type": "Service",
+      "name": "Lamper Home",
+      "serviceType": "Instalación de termostato inteligente y medidor de consumo eléctrico",
+      "description": "App y dispositivos instalados en casa para ver el consumo eléctrico por horas y tramos (punta, llano y valle), con histórico de Datadis, y controlar calefacción y aire acondicionado desde el móvil.",
+      "provider": {"@id": "https://lamper-home.github.io/#lamper"},
+      "areaServed": {"@type": "City", "name": "Terrassa"},
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Planes Lamper Home",
+        "itemListElement": [
+          {"@type": "Offer", "price": "0", "priceCurrency": "EUR", "itemOffered": {"@type": "Service", "name": "Lamper Zero", "description": "Histórico de Datadis y detalle de consumo por tramos."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lamper One", "description": "Consumo en tiempo real y análisis del consumo con centralita y medidor."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lamper Plus Calor", "description": "Termostato de calefacción con programación por horas."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lamper Plus Aire", "description": "Termostato del aire acondicionado con programación por horas."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lamper Plus Clima", "description": "Termostato de calefacción y aire con programación por horas."}}
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "¿Qué es Lamper Home?", "acceptedAnswer": {"@type": "Answer", "text": "Es una app y unos dispositivos que instala Lamper en tu casa. Te enseña cuánta luz gastas, en qué tramo (punta, llano o valle) y cuánto vas a gastar a final de mes, y te deja controlar la calefacción y el aire acondicionado desde el móvil."}},
+        {"@type": "Question", "name": "¿De dónde salen los datos de consumo?", "acceptedAnswer": {"@type": "Answer", "text": "De Datadis, la plataforma oficial de las distribuidoras eléctricas españolas, que guarda el consumo horario de tu contador. Con el medidor de Lamper One o un plan Plus también ves el consumo al momento."}},
+        {"@type": "Question", "name": "¿Tengo que cambiar de compañía eléctrica?", "acceptedAnswer": {"@type": "Answer", "text": "No. Lamper Home no es una comercializadora: funciona con la compañía que ya tengas."}},
+        {"@type": "Question", "name": "¿El termostato funciona si se cae el wifi?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. La centralita guarda la temperatura y la programación y sigue funcionando sin internet. Cuando vuelve la conexión, la app se pone al día."}},
+        {"@type": "Question", "name": "¿Dónde instaláis?", "acceptedAnswer": {"@type": "Answer", "text": "De momento instalamos en Terrassa (códigos postales del 08221 al 08228). Si estás fuera, escríbenos igualmente y lo miramos."}},
+        {"@type": "Question", "name": "¿Cuánto cuesta?", "acceptedAnswer": {"@type": "Answer", "text": "Lamper Zero es gratis. Los planes con dispositivos dependen de tu casa y de tu instalación, así que te preparamos un presupuesto a medida después de la visita."}}
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:500 700;font-display:swap;src:url(/assets/fonts/fraunces.woff2) format("woff2")}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:400 700;font-display:swap;src:url(/assets/fonts/manrope.woff2) format("woff2")}
+:root{
+  --ink:#0E121D;--navy:#052143;--night:#101010;--night-2:#161B28;--graphite:#4D4D4D;--steel:#6b6b6b;--line:#DADADA;
+  --mist:#F3F3F3;--paper:#FAF8F4;--white:#fff;
+  --energy:#F59E0B;--energy-soft:#FFBC7D;--savings:#16A34A;
+  --peak:#B91C1C;--flat:#D97706;--valley:#0D9488;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --wrap:1180px;--r:18px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;letter-spacing:-.02em;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--steel)}
+.skip{position:absolute;left:-999px;top:8px;background:#000;color:#fff;padding:10px 14px;border-radius:8px;z-index:99}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--energy);outline-offset:3px;border-radius:6px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .2s ease,background .2s ease,box-shadow .2s ease;border:1.5px solid transparent;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-primary:hover{box-shadow:0 10px 30px -10px rgba(14,18,29,.6)}
+.btn-energy{background:var(--energy);color:var(--ink)}
+.btn-energy:hover{box-shadow:0 10px 30px -10px rgba(245,158,11,.7)}
+.btn-ghost{border-color:currentColor;color:inherit}
+.btn svg{width:20px;height:20px}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(250,248,244,.86);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+.top.scrolled{border-color:var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.01em}
+.brand img{width:40px;height:40px;border-radius:10px;border:1px solid var(--line)}
+.nav{display:flex;gap:28px;font-weight:600;font-size:15px}
+.nav a{text-decoration:none;color:var(--graphite)}
+.nav a:hover{color:var(--ink)}
+.top .btn{min-height:44px;padding:0 18px;font-size:15px}
+@media (max-width:860px){.nav{display:none}}
+
+/* hero */
+.hero{padding:72px 0 96px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(46px,7vw,92px);font-weight:600}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--flat)}
+.hero .lead{font-size:clamp(18px,2vw,21px);color:var(--graphite);max-width:34ch;margin:28px 0 36px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero .note{margin-top:22px;font-size:14px;color:var(--steel);display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--savings);box-shadow:0 0 0 4px rgba(22,163,74,.15)}
+@media (max-width:920px){.hero .wrap{grid-template-columns:1fr}.hero{padding-top:40px}}
+
+/* phone */
+.phone{position:relative;width:min(340px,86vw);margin:0 auto;aspect-ratio:9/19;border-radius:48px;background:var(--night);padding:12px;box-shadow:0 50px 100px -30px rgba(5,33,67,.55),0 0 0 1px rgba(0,0,0,.08);transform:rotate(2.5deg)}
+.phone::before{content:"";position:absolute;top:22px;left:50%;width:96px;height:26px;margin-left:-48px;background:#000;border-radius:20px;z-index:2}
+.screen{height:100%;border-radius:38px;background:var(--night-2);color:#fff;padding:60px 20px 20px;display:flex;flex-direction:column;gap:14px;overflow:hidden;font-size:13px}
+.screen .s-h{display:flex;justify-content:space-between;align-items:baseline}
+.screen .s-h b{font-family:var(--serif);font-size:24px;font-weight:600}
+.screen .muted{color:#9aa3b5}
+.s-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:16px}
+.s-big{font-family:var(--serif);font-size:38px;line-height:1;font-weight:600}
+.s-big small{font-family:var(--sans);font-size:15px;font-weight:600;color:#9aa3b5;margin-left:4px}
+.s-trend{display:inline-flex;margin-top:8px;font-weight:700;color:#4ade80;font-size:12px;background:rgba(22,163,74,.15);padding:3px 8px;border-radius:99px}
+.bars{display:flex;align-items:flex-end;gap:5px;height:92px;margin-top:6px}
+.bars i{flex:1;border-radius:4px 4px 2px 2px;background:var(--energy);opacity:.9;transform-origin:bottom;animation:grow 1s cubic-bezier(.2,.8,.2,1) both}
+.bars i.f{background:transparent;border:1.5px dashed rgba(245,158,11,.6)}
+@keyframes grow{from{transform:scaleY(0)}}
+.split{display:flex;height:10px;border-radius:99px;overflow:hidden;margin:10px 0 8px}
+.legend{display:flex;justify-content:space-between;font-size:11px;color:#c3c9d6}
+.legend span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;background:var(--c)}
+.s-thermo{display:flex;align-items:center;justify-content:space-between}
+.s-thermo .t{font-family:var(--serif);font-size:30px;font-weight:600}
+.pill{font-size:11px;font-weight:700;padding:4px 10px;border-radius:99px;background:rgba(245,158,11,.18);color:var(--energy-soft)}
+.caption{text-align:center;font-size:12px;color:var(--steel);margin-top:22px}
+
+/* section commons */
+section{scroll-margin-top:80px}
+.sec{padding:120px 0}
+.sec-head{max-width:760px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(36px,5vw,62px);margin-top:14px}
+.sec-head p{font-size:19px;color:var(--graphite);margin-top:20px;max-width:56ch}
+
+/* consumption band (dark) */
+.dark{background:var(--navy);color:#fff}
+.dark .eyebrow{color:var(--energy-soft)}
+.dark .sec-head p{color:#c3cde0}
+.see{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.see-list{display:grid;gap:0;margin:0;padding:0;list-style:none}
+.see-list li{padding:26px 0;border-top:1px solid rgba(255,255,255,.14);display:grid;grid-template-columns:44px 1fr;gap:6px 14px}
+.see-list li:last-child{border-bottom:1px solid rgba(255,255,255,.14)}
+.see-list .n{font-family:var(--serif);font-size:15px;color:var(--energy-soft);padding-top:5px}
+.see-list h3{font-size:25px;font-weight:600}
+.see-list p{grid-column:2;color:#c3cde0;font-size:16px}
+.day{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:30px}
+.day h3{font-size:26px}
+.day p.sub{color:#c3cde0;font-size:15px;margin:8px 0 26px}
+.strip{display:grid;grid-template-columns:repeat(24,1fr);gap:3px}
+.strip i{height:54px;border-radius:5px;background:var(--c)}
+.hours{display:flex;justify-content:space-between;font-size:12px;color:#9fb0cc;margin-top:8px;font-variant-numeric:tabular-nums}
+.day .row-label{font-size:13px;font-weight:700;color:#fff;margin:22px 0 10px;letter-spacing:.02em}
+.day .keys{display:flex;flex-wrap:wrap;gap:18px;margin-top:24px;font-size:14px}
+.day .keys span{display:flex;align-items:center;gap:8px}
+.day .keys span::before{content:"";width:12px;height:12px;border-radius:3px;background:var(--c)}
+.day .fine{font-size:12.5px;color:#9fb0cc;margin-top:20px}
+@media (max-width:920px){.see{grid-template-columns:1fr;gap:48px}}
+
+/* control */
+.control{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:center}
+.dial{position:relative;aspect-ratio:1;max-width:440px;width:100%;margin:0 auto;border-radius:50%;background:radial-gradient(circle at 50% 40%,#fff 0,#f1ede6 70%);box-shadow:inset 0 0 0 1px var(--line),0 40px 80px -40px rgba(14,18,29,.35);display:grid;place-items:center}
+.dial svg{position:absolute;inset:0;width:100%;height:100%}
+.dial .val{text-align:center}
+.dial .val b{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(64px,9vw,104px);line-height:1;letter-spacing:-.04em}
+.dial .val span{font-size:15px;color:var(--steel);font-weight:600}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:36px 40px;margin-top:44px}
+.feat h3{font-family:var(--sans);font-size:18px;font-weight:700;letter-spacing:0;line-height:1.3;margin-bottom:6px}
+.feat p{color:var(--graphite);font-size:16px}
+@media (max-width:920px){.control{grid-template-columns:1fr;gap:56px}.dial{max-width:340px}}
+@media (max-width:560px){.feat{grid-template-columns:1fr}}
+
+/* plans */
+.plans-sec{background:var(--white)}
+.plans{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--white)}
+.plan{padding:30px 24px 28px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:18px}
+.plan:last-child{border-right:0}
+.plan .tag{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);min-height:18px}
+.plan h3{font-size:30px}
+.plan h3 span{display:block;font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--steel);margin-bottom:4px}
+.plan .lead-f{font-weight:700;font-size:16px;line-height:1.35;min-height:44px}
+.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:14.5px;color:var(--graphite)}
+.plan ul li{display:flex;gap:9px;line-height:1.4}
+.plan ul li::before{content:"";flex:none;width:14px;height:14px;margin-top:3px;border-radius:50%;background:var(--c,var(--savings)) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M4 7.2l2 2 4-4.4' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.plan .kit{font-size:13px;color:var(--steel);border-top:1px dashed var(--line);padding-top:14px;margin-top:auto}
+.plan .kit b{display:block;color:var(--ink);font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.plan .price{font-family:var(--serif);font-size:26px;font-weight:600}
+.plan .btn{min-height:46px;padding:0 18px;font-size:15px;justify-content:center}
+.plan.star{background:var(--ink);color:#fff;border-color:var(--ink)}
+.plan.star .tag{color:var(--energy)}
+.plan.star h3 span,.plan.star .kit{color:#aab2c3}
+.plan.star ul{color:#d7dce6}
+.plan.star .kit b{color:#fff}
+.plan.star .kit{border-color:rgba(255,255,255,.2)}
+.plans-foot{margin-top:22px;font-size:14px;color:var(--steel)}
+@media (max-width:1100px){.plans{grid-template-columns:repeat(2,1fr)}.plan{border-bottom:1px solid var(--line)}.plan:nth-child(2n){border-right:0}.plan.zero{grid-column:1/-1;border-right:0}}
+@media (max-width:620px){.plans{grid-template-columns:1fr}.plan{border-right:0}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{padding:0 36px 0 0;position:relative}
+.steps li::before{counter-increment:s;content:"0" counter(s);font-family:var(--serif);font-size:84px;font-weight:600;line-height:1;color:var(--energy);display:block;margin-bottom:22px;letter-spacing:-.04em}
+.steps li::after{content:"";position:absolute;top:42px;left:110px;right:24px;height:1.5px;background:linear-gradient(90deg,var(--line),transparent)}
+.steps li:last-child::after{display:none}
+.steps h3{font-size:28px;margin-bottom:12px}
+.steps p{color:var(--graphite)}
+.code{display:inline-flex;gap:6px;margin-top:18px}
+.code b{width:44px;height:52px;display:grid;place-items:center;border:1.5px solid var(--ink);border-radius:10px;font-family:var(--serif);font-size:24px;font-weight:600;background:#fff}
+@media (max-width:860px){.steps{grid-template-columns:1fr;gap:48px}.steps li::after{display:none}}
+
+/* lamper */
+.lamper{display:grid;grid-template-columns:1.2fr .8fr;gap:72px;align-items:end}
+.lamper h2{font-size:clamp(34px,4.4vw,56px)}
+.lamper p{font-size:18px;color:var(--graphite);margin-top:22px;max-width:52ch}
+.trades{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.trades li{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 16px;font-size:14.5px;font-weight:600}
+.area{margin-top:30px;padding:22px 24px;border-radius:var(--r);background:var(--mist);font-size:15px}
+.area b{font-family:var(--serif);font-size:22px;display:block;margin-bottom:4px}
+@media (max-width:920px){.lamper{grid-template-columns:1fr;gap:40px}}
+
+/* faq */
+.faq{max-width:860px}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:26px 48px 26px 0;position:relative;font-family:var(--serif);font-size:clamp(21px,2.4vw,26px);font-weight:600;line-height:1.25}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:16px;height:16px;margin-top:-8px;background:linear-gradient(var(--ink),var(--ink)) center/16px 2px no-repeat,linear-gradient(var(--ink),var(--ink)) center/2px 16px no-repeat;transition:transform .25s ease}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 48px 28px 0;color:var(--graphite);font-size:17px;max-width:66ch}
+
+/* final cta */
+.final{background:var(--ink);color:#fff;padding:120px 0;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;right:-180px;top:-180px;width:560px;height:560px;border-radius:50%;background:radial-gradient(closest-side,rgba(245,158,11,.35),transparent)}
+.final .wrap{position:relative;display:grid;grid-template-columns:1.3fr .7fr;gap:56px;align-items:end}
+.final h2{font-size:clamp(42px,6vw,80px)}
+.final p{color:#c3c9d6;font-size:19px;margin-top:22px;max-width:46ch}
+.final .ctas{display:flex;flex-direction:column;gap:12px;align-items:stretch}
+.final .ctas .btn{justify-content:center}
+.final .small{font-size:14px;color:#9aa3b5;text-align:center}
+@media (max-width:860px){.final .wrap{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:var(--night);color:#9aa3b5;padding:56px 0 40px;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+footer b{color:#fff;font-weight:700;display:block;margin-bottom:10px}
+footer a{color:#d7dce6;text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer .legal{grid-column:1/-1;border-top:1px solid #262a33;padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer address{font-style:normal;line-height:1.8}
+@media (max-width:760px){footer .wrap{grid-template-columns:1fr}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.no-js .rv{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.bars i{animation:none}.btn{transition:none}.phone{transform:none}}
+
+/* wa float */
+.wa{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.4);transition:transform .2s}
+.wa:hover{transform:scale(1.07)}
+.wa svg{width:30px;height:30px}
+</style>
+</head>
+<body class="no-js">
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Lamper Home, inicio">
+      <img src="/assets/logo.png" width="40" height="40" alt="">
+      Lamper Home
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#consumo">Consumo</a>
+      <a href="#clima">Clima</a>
+      <a href="#planes">Planes</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/34680427261?text=Hola%2C%20me%20interesa%20Lamper%20Home" rel="noopener">Pedir presupuesto</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Lamper Home · Terrassa</p>
+      <h1 id="h1" style="margin-top:18px">Tu casa, más cómoda. Tu luz, <em>bajo control.</em></h1>
+      <p class="lead">Mira cuánta luz gastas hora a hora, controla la calefacción y el aire desde el móvil y paga menos. Lo instalamos nosotros.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://wa.me/34680427261?text=Hola%2C%20me%20interesa%20Lamper%20Home" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#planes">Ver los planes</a>
+      </div>
+      <p class="note"><span class="dot" aria-hidden="true"></span>Instalación y servicio técnico en Terrassa por Lamper</p>
+    </div>
+
+    <figure style="margin:0">
+      <div class="phone" aria-hidden="true">
+        <div class="screen">
+          <div class="s-h"><b>Mi consumo</b><span class="muted">Octubre</span></div>
+          <div class="s-card">
+            <div class="muted">Llevas este mes</div>
+            <div class="s-big">142<small>kWh</small></div>
+            <span class="s-trend">↓ 12 % que en septiembre</span>
+            <div class="bars">
+              <i style="height:46%;animation-delay:.05s"></i><i style="height:62%;animation-delay:.1s"></i><i style="height:38%;animation-delay:.15s"></i><i style="height:71%;animation-delay:.2s"></i><i style="height:55%;animation-delay:.25s"></i><i style="height:84%;animation-delay:.3s"></i><i style="height:49%;animation-delay:.35s"></i><i class="f" style="height:58%"></i><i class="f" style="height:52%"></i>
+            </div>
+          </div>
+          <div class="s-card">
+            <div class="muted">Por tramos</div>
+            <div class="split"><i style="width:24%;background:var(--peak)"></i><i style="width:31%;background:var(--flat)"></i><i style="width:45%;background:var(--valley)"></i></div>
+            <div class="legend"><span style="--c:var(--peak)">Punta 24 %</span><span style="--c:var(--flat)">Llano 31 %</span><span style="--c:var(--valley)">Valle 45 %</span></div>
+          </div>
+          <div class="s-card s-thermo">
+            <div><div class="muted">Salón</div><div class="t">21,5°</div></div>
+            <span class="pill">Calefacción · 22°</span>
+          </div>
+        </div>
+      </div>
+      <figcaption class="caption">Pantalla de ejemplo de la app Lamper Home</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec dark" id="consumo" aria-labelledby="h-consumo">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Consumo eléctrico</p>
+      <h2 id="h-consumo">Deja de adivinar qué hay detrás de tu factura.</h2>
+      <p>Lamper Home lee el consumo de tu contador y te lo enseña claro: qué gastas cada día, en qué tramo y cómo vas a cerrar el mes.</p>
+    </div>
+    <div class="see">
+      <ol class="see-list rv">
+        <li><span class="n">01</span><h3>Tu histórico, desde el primer día</h3><p>Importamos hasta dos años de consumo horario desde Datadis, la plataforma oficial de las distribuidoras. Gratis, con Lamper Zero.</p></li>
+        <li><span class="n">02</span><h3>Punta, llano y valle</h3><p>Ve qué parte de tu consumo cae en las horas caras y mueve lavadoras, lavavajillas o la carga del coche a las baratas.</p></li>
+        <li><span class="n">03</span><h3>Previsión de fin de mes</h3><p>La app compara con el mes y el año anteriores y te enseña cómo vas a cerrar, antes de que llegue la factura.</p></li>
+        <li><span class="n">04</span><h3>Al momento, con el medidor</h3><p>Con Lamper One instalamos un medidor en tu cuadro eléctrico: ves lo que gasta tu casa ahora mismo, no ayer.</p></li>
+      </ol>
+      <div class="day rv">
+        <h3>Tu día en la tarifa 2.0TD</h3>
+        <p class="sub">El precio de la luz cambia según la hora. Así se reparte un día laborable en la tarifa doméstica más común en la península.</p>
+        <p class="row-label">Lunes a viernes</p>
+        <div class="strip" role="img" aria-label="De 0 a 8 h valle; de 8 a 10 h llano; de 10 a 14 h punta; de 14 a 18 h llano; de 18 a 22 h punta; de 22 a 24 h llano.">
+          <i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i>
+          <i style="--c:var(--flat)"></i><i style="--c:var(--flat)"></i>
+          <i style="--c:var(--peak)"></i><i style="--c:var(--peak)"></i><i style="--c:var(--peak)"></i><i style="--c:var(--peak)"></i>
+          <i style="--c:var(--flat)"></i><i style="--c:var(--flat)"></i><i style="--c:var(--flat)"></i><i style="--c:var(--flat)"></i>
+          <i style="--c:var(--peak)"></i><i style="--c:var(--peak)"></i><i style="--c:var(--peak)"></i><i style="--c:var(--peak)"></i>
+          <i style="--c:var(--flat)"></i><i style="--c:var(--flat)"></i>
+        </div>
+        <div class="hours"><span>0 h</span><span>6 h</span><span>12 h</span><span>18 h</span><span>24 h</span></div>
+        <p class="row-label">Sábados, domingos y festivos nacionales</p>
+        <div class="strip" role="img" aria-label="Todo el día valle.">
+          <i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i><i style="--c:var(--valley)"></i>
+        </div>
+        <div class="keys"><span style="--c:var(--peak)">Punta · la más cara</span><span style="--c:var(--flat)">Llano</span><span style="--c:var(--valley)">Valle · la más barata</span></div>
+        <p class="fine">Horario peninsular. La app usa el calendario de tu tarifa, festivos incluidos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="clima" aria-labelledby="h-clima">
+  <div class="wrap control">
+    <div class="dial rv" aria-hidden="true">
+      <svg viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="86" fill="none" stroke="#e6e1d8" stroke-width="6" stroke-linecap="round" stroke-dasharray="405 540" transform="rotate(135 100 100)"/>
+        <circle cx="100" cy="100" r="86" fill="none" stroke="#F59E0B" stroke-width="6" stroke-linecap="round" stroke-dasharray="260 540" transform="rotate(135 100 100)"/>
+      </svg>
+      <div class="val"><b>22°</b><span>Calefacción · Salón</span></div>
+    </div>
+    <div>
+      <div class="sec-head rv" style="margin-bottom:0">
+        <p class="eyebrow">Calefacción y aire</p>
+        <h2 id="h-clima">La temperatura justa, a la hora justa.</h2>
+        <p>Conectamos tu caldera y tu aire acondicionado a la centralita. Desde la app eliges la temperatura y el horario, estés en el sofá o de vacaciones.</p>
+      </div>
+      <div class="feat rv">
+        <div><h3>Programación por horas</h3><p>Calienta antes de que llegues y apaga cuando sales. Una semana tipo y te olvidas.</p></div>
+        <div><h3>Sensor en la habitación</h3><p>Mide donde estás tú, no al lado de la caldera.</p></div>
+        <div><h3>Funciona sin internet</h3><p>Si se cae el wifi, la centralita sigue con tu temperatura y tu horario.</p></div>
+        <div><h3>Frío y calor en una app</h3><p>Caldera y aire en un mismo termostato con Lamper Plus Clima.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec plans-sec" id="planes" aria-labelledby="h-planes">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Planes</p>
+      <h2 id="h-planes">Empieza gratis. Crece cuando quieras.</h2>
+      <p>Cada plan incluye los dispositivos que necesita y su instalación. Te decimos qué encaja con tu casa en la visita.</p>
+    </div>
+    <div class="plans rv">
+      <article class="plan zero">
+        <p class="tag">Para empezar</p>
+        <h3><span>Lamper</span>Zero</h3>
+        <p class="lead-f">Tu consumo de Datadis, ordenado</p>
+        <ul><li>Histórico de Datadis</li><li>Detalle por tramos</li></ul>
+        <p class="kit"><b>Sin dispositivos</b>Solo necesitas la app.</p>
+        <p class="price">Gratis</p>
+      </article>
+      <article class="plan">
+        <p class="tag">Consumo</p>
+        <h3><span>Lamper</span>One</h3>
+        <p class="lead-f">Tu consumo en tiempo real</p>
+        <ul><li>Consumo en tiempo real</li><li>Análisis del consumo</li><li>Detalle por tramos</li><li>Histórico de Datadis</li></ul>
+        <p class="kit"><b>Instalamos</b>Centralita y medidor de consumo.</p>
+        <a class="btn btn-ghost" href="https://wa.me/34680427261?text=Hola%2C%20quiero%20presupuesto%20de%20Lamper%20One" rel="noopener">Pedir presupuesto</a>
+      </article>
+      <article class="plan">
+        <p class="tag">Calefacción</p>
+        <h3><span>Lamper Plus</span>Calor</h3>
+        <p class="lead-f">Termostato de calefacción</p>
+        <ul><li>Programación por horas</li><li>Análisis del consumo</li><li>Consumo en tiempo real</li><li>Detalle por tramos e histórico</li></ul>
+        <p class="kit"><b>Instalamos</b>Centralita, medidor, conector de caldera y sensor de temperatura.</p>
+        <a class="btn btn-ghost" href="https://wa.me/34680427261?text=Hola%2C%20quiero%20presupuesto%20de%20Lamper%20Plus%20Calor" rel="noopener">Pedir presupuesto</a>
+      </article>
+      <article class="plan">
+        <p class="tag">Aire</p>
+        <h3><span>Lamper Plus</span>Aire</h3>
+        <p class="lead-f">Termostato del aire acondicionado</p>
+        <ul><li>Programación por horas</li><li>Análisis del consumo</li><li>Consumo en tiempo real</li><li>Detalle por tramos e histórico</li></ul>
+        <p class="kit"><b>Instalamos</b>Centralita, medidor y un conector de aire por aparato.</p>
+        <a class="btn btn-ghost" href="https://wa.me/34680427261?text=Hola%2C%20quiero%20presupuesto%20de%20Lamper%20Plus%20Aire" rel="noopener">Pedir presupuesto</a>
+      </article>
+      <article class="plan star">
+        <p class="tag">El más completo</p>
+        <h3><span>Lamper Plus</span>Clima</h3>
+        <p class="lead-f">Calefacción y aire en un termostato</p>
+        <ul><li>Programación por horas</li><li>Análisis del consumo</li><li>Consumo en tiempo real</li><li>Detalle por tramos e histórico</li></ul>
+        <p class="kit"><b>Instalamos</b>Centralita, medidor, conector de caldera, sensor y conectores de aire.</p>
+        <a class="btn btn-energy" href="https://wa.me/34680427261?text=Hola%2C%20quiero%20presupuesto%20de%20Lamper%20Plus%20Clima" rel="noopener">Pedir presupuesto</a>
+      </article>
+    </div>
+    <p class="plans-foot">El precio de los planes con dispositivos depende de tu instalación: te damos el presupuesto después de la visita, antes de empezar.</p>
+  </div>
+</section>
+
+<section class="sec" id="como-funciona" aria-labelledby="h-como">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Cómo funciona</p>
+      <h2 id="h-como">De la llamada a tu móvil, en tres pasos.</h2>
+    </div>
+    <ol class="steps rv">
+      <li><h3>Nos escribes</h3><p>Por WhatsApp o teléfono. Te llamamos en un plazo de dos días laborables para concretar una visita.</p></li>
+      <li><h3>Instalamos</h3><p>Un técnico de Lamper revisa tu casa, te da el presupuesto y deja montados la centralita y los dispositivos de tu plan.</p></li>
+      <li><h3>Abres la app</h3><p>Te damos un código de cuatro caracteres. Lo escribes en Lamper Home y la app te guía para conectar cada dispositivo.</p>
+        <div class="code" aria-hidden="true"><b>A</b><b>5</b><b>3</b><b>B</b></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0" aria-labelledby="h-lamper">
+  <div class="wrap lamper">
+    <div class="rv">
+      <p class="eyebrow">Quién está detrás</p>
+      <h2 id="h-lamper" style="margin-top:14px">Lo instala un instalador de verdad, no una caja por mensajero.</h2>
+      <p>Lamper Home es un servicio de Lamper Instalaciones y Mantenimiento, empresa instaladora de Terrassa. Los mismos técnicos que montan tu caldera, tu aire o tu cuadro eléctrico conectan Lamper Home y te atienden si algo falla.</p>
+      <ul class="trades" style="margin-top:30px" aria-label="Especialidades de Lamper">
+        <li>Electricidad</li><li>Climatización</li><li>Aerotermia</li><li>Fontanería</li><li>Fotovoltaica</li><li>Domótica</li><li>Gas</li><li>Ventilación</li><li>Mantenimiento</li>
+      </ul>
+    </div>
+    <div class="area rv">
+      <b>Terrassa</b>
+      De momento instalamos en los códigos postales del 08221 al 08228. ¿Estás cerca? Escríbenos igualmente.
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="preguntas" style="padding-top:40px" aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2 id="h-faq">Lo que nos suelen preguntar.</h2>
+    </div>
+    <div class="faq rv">
+      <details><summary>¿Qué es Lamper Home?</summary><p>Es una app y unos dispositivos que instala Lamper en tu casa. Te enseña cuánta luz gastas, en qué tramo (punta, llano o valle) y cuánto vas a gastar a final de mes, y te deja controlar la calefacción y el aire acondicionado desde el móvil.</p></details>
+      <details><summary>¿De dónde salen los datos de consumo?</summary><p>De Datadis, la plataforma oficial de las distribuidoras eléctricas españolas, que guarda el consumo horario de tu contador. Con el medidor de Lamper One o un plan Plus también ves el consumo al momento.</p></details>
+      <details><summary>¿Tengo que cambiar de compañía eléctrica?</summary><p>No. Lamper Home no es una comercializadora: funciona con la compañía que ya tengas.</p></details>
+      <details><summary>¿El termostato funciona si se cae el wifi?</summary><p>Sí. La centralita guarda la temperatura y la programación y sigue funcionando sin internet. Cuando vuelve la conexión, la app se pone al día.</p></details>
+      <details><summary>¿Dónde instaláis?</summary><p>De momento instalamos en Terrassa (códigos postales del 08221 al 08228). Si estás fuera, escríbenos igualmente y lo miramos.</p></details>
+      <details><summary>¿Cuánto cuesta?</summary><p>Lamper Zero es gratis. Los planes con dispositivos dependen de tu casa y de tu instalación, así que te preparamos un presupuesto a medida después de la visita.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="h-final">
+  <div class="wrap">
+    <div>
+      <h2 id="h-final">¿Hablamos de tu casa?</h2>
+      <p>Cuéntanos qué tienes (caldera, aire, placas…) y te decimos qué plan te encaja. Sin compromiso.</p>
+    </div>
+    <div class="ctas">
+      <a class="btn btn-energy" href="https://wa.me/34680427261?text=Hola%2C%20me%20interesa%20Lamper%20Home" rel="noopener">Escríbenos por WhatsApp</a>
+      <a class="btn btn-ghost" href="tel:+34680427261">Llamar al 680 42 72 61</a>
+      <p class="small">o a <a href="mailto:info@lamper.es" style="color:#fff;text-decoration:underline">info@lamper.es</a></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Lamper Home</b>
+      <p>Un servicio de Lamper Instalaciones y Mantenimiento S.L.</p>
+    </div>
+    <div>
+      <b>Contacto</b>
+      <address>
+        <a href="tel:+34680427261">680 42 72 61</a><br>
+        <a href="mailto:info@lamper.es">info@lamper.es</a><br>
+        <a href="https://www.lamper.es" rel="noopener">www.lamper.es</a>
+      </address>
+    </div>
+    <div>
+      <b>Dirección</b>
+      <address>Ronda de Ponent 166, Local 1<br>08225 Terrassa (Barcelona)</address>
+    </div>
+    <div class="legal">
+      <span>© 2026 Lamper Instalaciones y Mantenimiento S.L. · NIF B75522136</span>
+      <span><a href="/aviso-legal/">Aviso legal</a> · Esta web no usa cookies</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/34680427261?text=Hola%2C%20me%20interesa%20Lamper%20Home" rel="noopener" aria-label="Escribir a Lamper por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>
+</a>
+
+<script>
+document.body.classList.remove('no-js');
+(function(){
+  var top=document.getElementById('top');
+  addEventListener('scroll',function(){top.classList.toggle('scrolled',scrollY>8)},{passive:true});
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
