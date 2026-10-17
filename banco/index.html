@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Autorización bancaria · Lamper</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#0f1b2d;color:#f3efe6;margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box}
+main{max-width:460px;width:100%;text-align:center}
+h1{font-size:1.5rem;margin:0 0 .5rem}
+p{line-height:1.5;color:#cfd6e2}
+.ok{font-size:3rem}
+textarea{width:100%;box-sizing:border-box;height:6.5rem;border-radius:10px;border:1px solid #3a4a63;background:#16263d;color:#f3efe6;padding:10px;font:13px ui-monospace,monospace;word-break:break-all}
+button{margin-top:12px;width:100%;padding:14px;border:0;border-radius:10px;background:#d4a64a;color:#0f1b2d;font-weight:700;font-size:1rem;cursor:pointer}
+.err{color:#ffb3a7}
+</style>
+</head>
+<body>
+<main>
+<div id="ok" hidden>
+  <div class="ok">✅</div>
+  <h1>Banco autorizado</h1>
+  <p>Copia este texto y pégalo en el chat de Telegram con Hermes. Caduca en unos minutos.</p>
+  <textarea id="t" readonly></textarea>
+  <button id="b" type="button">Copiar</button>
+</div>
+<div id="ko" hidden>
+  <div class="ok">⚠️</div>
+  <h1>No se ha completado</h1>
+  <p class="err" id="e"></p>
+  <p>Avisa a Hermes por Telegram para generar un enlace nuevo.</p>
+</div>
+</main>
+<script>
+var q=new URLSearchParams(location.search),c=q.get('code');
+if(c){document.getElementById('ok').hidden=false;var t=document.getElementById('t');t.value='BANCO '+(q.get('state')||'')+' '+c;
+document.getElementById('b').onclick=function(){t.select();(navigator.clipboard?navigator.clipboard.writeText(t.value):Promise.reject()).catch(function(){document.execCommand('copy')});this.textContent='Copiado ✓'};}
+else{document.getElementById('ko').hidden=false;document.getElementById('e').textContent=(q.get('error')||'sin código')+' '+(q.get('error_description')||'');}
+history.replaceState(null,'',location.pathname);
+</script>
+</body>
+</html>

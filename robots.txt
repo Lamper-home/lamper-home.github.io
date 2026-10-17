@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /banco/
 Allow: /
 
 Sitemap: https://lamper-home.github.io/sitemap.xml
